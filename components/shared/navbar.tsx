@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, Menu } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -35,17 +36,16 @@ const itemClass =
 
 /* ------------------------------ Logo ------------------------------- */
 
-// Placeholder. Later replace the <div> with next/image, e.g.
-// <Image src="/images/pages/shared/logo.webp" alt="..." width={96} height={96} priority />
 function SiteLogo() {
   return (
     <LinkTo href="/" aria-label="হোম পেইজে যান" className="shrink-0">
-      <div
-        aria-hidden="true"
-        className="flex size-16 items-center justify-center rounded-full border-2 border-dashed border-primary/40 bg-muted text-xs font-medium text-muted-foreground md:size-20"
-      >
-        Logo
-      </div>
+      <Image
+        src="/images/pages/shared/bnp-logo.png"
+        alt="বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি) এর লোগো"
+        width={148}
+        height={148}
+        className="size-16 md:size-20"
+      />
     </LinkTo>
   );
 }
